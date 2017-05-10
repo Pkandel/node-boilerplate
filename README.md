@@ -1,5 +1,5 @@
 # node-mongodb-express-webAPI-boilerplate
-This is a boilerplate to quickly get started for web api using technologies Node, Mongodb with Mongoose, Express, Docker and Docker-compose.
+This is a boilerplate to quickly get started for web api using technologies `Node`, `Mongodb` with `Mongoose`, `Express`, `Docker`and `Docker-compose`.
 ### dependencies
 - Nodejs - Back-End
 - Express - Server
@@ -17,5 +17,7 @@ It is really easy to get started. You just need to do the following
 ``` npm install ```
 #### if you want to run it through npm (make sure mongodb is running)
 ``` npm start ```
+and navigate to http://localhost:28080/api/
 #### Or you can use docker-compose (make sure docker is running)
 ``` docker-compose up ```
+and navigate to http://localhost:28080/api/
