@@ -1,8 +1,9 @@
 
 //this function handle the returning respose
-function response(res, success, message) {
+function response(res, status, data, message) {
     return res.json({
-        success: success,
+        status: status,
+        data: data,
         message: message
     });
 }

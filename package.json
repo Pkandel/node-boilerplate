@@ -32,6 +32,7 @@
     "dotenv": "^4.0.0",
     "joi": "^10.4.1",
     "mongoose": "^4.9.7",
-    "mongoose-sequence": "^3.2.0"
+    "mongoose-sequence": "^3.2.0",
+    "swagger-jsdoc": "^1.9.4"
   }
 }

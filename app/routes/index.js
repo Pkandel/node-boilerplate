@@ -31,6 +31,7 @@ router.get(('/'), (req, res) => {
     })
 });
 
+
 //mount user routes at /users
  router.use('/users', userRoutes);
 
