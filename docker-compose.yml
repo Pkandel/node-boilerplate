@@ -1,31 +1,19 @@
 version: '2.0'
 
 services:
-  keycloak-facebook-microservice:
+  node-api:
     build:
       context: .
-    volumes:
-      # Mounts the project directory on the host to /app inside the container,
-      # allowing you to modify the code without having to rebuild the image.
-      - .:/app
     # Expose ports [HOST:CONTAINER}
     ports:
       - "28080:28080"
-
     # Set environment variables from this file
-    env_file:
-      - .env
-
     # Overwrite any env var defined in .env file (if required)
     environment:
-      - MONGO_HOST=mongodb://mongo/user
-
-    # Link to containers in another service.
-    # Links also express dependency between services in the same way as depends_on,
-    # so they determine the order of service startup.
+      - MONGO_HOST=mongodb://mongo/node-api
     links:
       - mongo:mongo
   mongo:
     image: "mongo:3.4.4"
     ports:
-      - "27018:27017"
+      - "27017:27017"

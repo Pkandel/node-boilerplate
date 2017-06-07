@@ -2,7 +2,7 @@ import express  from 'express';
 import logger from 'morgan';
 import bodyParser from 'body-parser';
 import config from './config';
-import routes from '../app/routes';
+import routes from '../routes';
 import swaggerJSDoc from 'swagger-jsdoc';
 import path from 'path';
 
@@ -29,7 +29,7 @@ var options = {
     // import swaggerDefinitions
     swaggerDefinition: swaggerDefinition,
     // path to the API docs
-    apis: ['./app/routes/*.js']
+    apis: ['./src/routes/*.js']
 };
 // initialize swagger-jsdoc
 var swaggerSpec = swaggerJSDoc(options);

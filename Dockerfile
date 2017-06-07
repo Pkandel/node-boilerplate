@@ -10,11 +10,17 @@ RUN mkdir -p /app
 WORKDIR /app
 
 #copy all fies from current directory to /app container
-COPY . /app/
+COPY package.json /app
 
-#expose port 28080
+RUN npm install
+RUN npm install babel-cli -g
+
+# copy rest of the project
+COPY . /app
+RUN npm run build
+
+#expose port 4000 to outside world
 EXPOSE 28080
-
+ 
 #cmd to start 
 CMD ["npm", "start"]
-
