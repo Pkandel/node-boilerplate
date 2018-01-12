@@ -1,42 +1,48 @@
 {
-  "name": "node-api",
+  "name": "note-taking-apps-backend",
   "version": "1.0.0",
-  "description": "The node-api backend",
-  "main": "index.js",
+  "description": "The note-taking-app backend written in nodejs.",
+  "main": "api/index.js",
   "scripts": {
-    "dev": "nodemon index.js --exec babel-node --presets es2015",
+    "dev": "nodemon api/index.js --exec babel-node",
+    "debug": "nodemon --inspect api/index --exec babel-node",
     "clean": "rm -rf build && mkdir build",
-    "build-server": "babel src  --out-dir build",
-    "build": "npm run clean && npm run build-server",
-    "start": "node build/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build-server": "babel api  --out-dir build",
+    "preprod": "npm run clean && npm run build-server",
+    "prod": "node build/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "node_modules/.bin/eslint api/"
   },
   "author": "",
   "license": "UNLICENSED",
   "dependencies": {
     "axios": "^0.16.1",
     "babel-cli": "^6.24.1",
-    "babel-preset-es2015": "^6.24.1",
     "bcryptjs": "^1.0.2",
     "body-parser": "^1.17.2",
     "cors": "^2.8.3",
-    "directmail": "^0.1.8",
     "dotenv": "^4.0.0",
     "express": "^4.15.3",
+    "joi": "^13.1.0",
     "jsonwebtoken": "^7.4.1",
     "jwt-simple": "^0.5.1",
     "mongoose": "^4.10.2",
     "mongoose-sequence": "^3.2.0",
     "morgan": "^1.8.2",
-    "nodemailer": "^4.0.1",
     "nodemon": "^1.11.0",
-    "passport-jwt": "^2.2.1",
-    "swagger-jsdoc": "^1.9.4"
+    "swagger-express-mw": "^0.7.0"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
-    "babel-preset-es2015": "^6.24.1",
-    "cors": "^2.8.3"
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "cors": "^2.8.3",
+    "eslint": "^4.15.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.5.1"
   }
 }

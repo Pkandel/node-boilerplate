@@ -1,27 +1,39 @@
-# node-mongodb-express-webAPI-boilerplate
-This is a boilerplate to quickly get started for web api using technologies 
-``` 
-Node, Mongodb with Mongoose, Express, Docker, Docker-compose and Swagger api
-```
-### dependencies
-- Nodejs - Back-End
-- Express - Server
-- MongoDB - database
-- Mongoose - ORM
-- Joi - To define schema for environment variable
-- Morgan - To get preety output in console
-- Babel - To support es6 syntax
-- Swagger - An API for better documentaion
+### To run in development mode
+ 
+>  make sure the mongodb is running
+ ```
+ sudo mongod  
+ 
+ ```
+> run the project (without docker)
+```	
+  npm run dev 
 
-### Get started
-It is really easy to get started. You just need to do the following
-#### First clone the repository into the local machine and navigate to the cloned directory
-``` git clone https://github.com/pkandel/node-mongodb-express-webAPI-boilerplate && cd node-mongodb-express-webAPI-boilerplate ```
-#### Install the dependencies using
-``` npm install ```
-#### if you want to run it through npm (make sure mongodb is running)
-``` npm start ```
-and navigate to http://localhost:28080/api-docs/ where you will find the API docs
-#### Or you can use docker-compose (make sure docker is running)
-``` docker-compose up ```
-and navigate to http://localhost:28080/api-docs/ where you will find the API docs
+```		
+> run the project (with docker)
+```
+   docker-compose up 
+
+ ```
+
+> run in production 
+```
+   npm run prod
+
+ ```
+
+ ### To run the project in debug mode
+ ```
+   npm run debug
+```
+> Then the chrome will automatically open the debug window, if not navigate to chrome://inspect and select the node devtools.
+#### chrome inspector 
+
+![chrome-inspector](https://github.com/Pkandel/note-taking-apps/blob/component/backend/backend/public/img/chrome-inspector.png)
+
+#### chrome dev tool window
+![chrome-dev-tools](https://github.com/Pkandel/note-taking-apps/blob/component/backend/backend/public/img/dev-window.png)
+
+#### Urls
+ * http://localhost:8000/api - backend url 
+ * http://localhost:8000/spec/ -swagger api
